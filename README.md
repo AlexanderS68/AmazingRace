@@ -18,8 +18,13 @@ This program solves a maze by finding a path from the start point to the end poi
 
 5. Prepare your maze by creating a text file (e.g., `maze.txt`) with the following format:
    - Each line represents a row in the maze.
-   - Use spaces or commas to separate the values in each row.
+   - Use spaces to separate the values in each row.
    - Use `0` to represent empty cells or walls, and `1` to represent valid path cells.
+   - There will only ever be one entrance, and one exit on each maze.
+   - There will only ever be a single “1” on the first line of the file, this is the maze
+     entrance.
+   - There will only ever be a single “1” on the last line of the file, this is the maze exit.
+   - There will only ever be one “complete path” through the maze.
 
 6. Run the program using the following command:
 
@@ -38,8 +43,6 @@ This program solves a maze by finding a path from the start point to the end poi
 - The `FindPath` method uses a recursive algorithm to explore the maze and find a valid path from the start point to the end point.
 - The `GetNeighbors` method retrieves all valid neighboring points of a given point in the maze.
 - The program assumes that the maze is rectangular (each row has the same length), and the maze file is correctly formatted.
-
-Feel free to customize the maze by modifying the `maze.txt` file or adapting the code to suit your specific needs. Enjoy solving the maze!
 
 
 ## How to Run the Unit Tests
@@ -61,9 +64,10 @@ Review the test results to ensure that all tests pass successfully. If any tests
 
 The unit tests cover the following scenarios:
 
-TestFindPath_PositiveCase: Verifies that a valid path is found from the start point to the end point in a maze with obstacles.
-TestFindPath_UnreachableStart: Verifies that no path is found when the start point is surrounded by obstacles.
-TestFindPath_SameStartAndEnd: Verifies that a valid path with a single point is returned when the start and end points are the same.
-TestFindPath_NegativeCase: Verifies that no path is found when the maze has no valid path from the start point to the end point.
-TestFindPath_SingleValidPath: Verifies that a valid path is found from the start point to the end point in a maze with only one valid path.
-Feel free to explore the unit tests to understand the test scenarios and adapt them according to your requirements.
+- TestFindPath_PositiveCase: Verifies that a valid path is found from the start point to the end point in a maze with obstacles.
+- TestFindPath_UnreachableStart: Verifies that no path is found when the start point is surrounded by obstacles.
+- TestFindPath_SameStartAndEnd: Verifies that a valid path with a single point is returned when the start and end points are the same.
+- TestFindPath_NegativeCase: Verifies that no path is found when the maze has no valid path from the start point to the end point.
+- TestFindPath_SingleValidPath: Verifies that a valid path is found from the start point to the end point in a maze with only one valid path.
+
+Feel free to customize the maze by modifying the `maze.txt` file or adapting the code to suit your specific needs. Enjoy solving the maze!
