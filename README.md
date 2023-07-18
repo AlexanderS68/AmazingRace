@@ -40,3 +40,30 @@ This program solves a maze by finding a path from the start point to the end poi
 - The program assumes that the maze is rectangular (each row has the same length), and the maze file is correctly formatted.
 
 Feel free to customize the maze by modifying the `maze.txt` file or adapting the code to suit your specific needs. Enjoy solving the maze!
+
+
+## How to Run the Unit Tests
+
+Make sure you have the .NET Core SDK installed on your machine. You can download it from the official .NET website: https://dotnet.microsoft.com/download
+Clone or download the project source code to your local machine.
+Open a terminal or command prompt and navigate to the directory containing the project files.
+Run the following command to execute the unit tests:
+
+```shell
+dotnet test 
+```
+
+This command will execute only the unit tests within the UnitTest class from the AmazingRaceSolution.Tests namespace.
+The test runner will execute the tests and display the results in the terminal. You will see the test outcomes, including any failures or errors.
+Review the test results to ensure that all tests pass successfully. If any tests fail, the test runner will provide information about the failures, helping you identify the cause.
+
+## Test Scenarios Covered
+
+The unit tests cover the following scenarios:
+
+TestFindPath_PositiveCase: Verifies that a valid path is found from the start point to the end point in a maze with obstacles.
+TestFindPath_UnreachableStart: Verifies that no path is found when the start point is surrounded by obstacles.
+TestFindPath_SameStartAndEnd: Verifies that a valid path with a single point is returned when the start and end points are the same.
+TestFindPath_NegativeCase: Verifies that no path is found when the maze has no valid path from the start point to the end point.
+TestFindPath_SingleValidPath: Verifies that a valid path is found from the start point to the end point in a maze with only one valid path.
+Feel free to explore the unit tests to understand the test scenarios and adapt them according to your requirements.
