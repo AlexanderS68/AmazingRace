@@ -71,5 +71,3 @@ The unit tests cover the following scenarios:
 - TestFindPath_SingleValidPath: Verifies that a valid path is found from the start point to the end point in a maze with only one valid path.
 
 Feel free to customize the maze by modifying the `maze.txt` file or adapting the code to suit your specific needs.
-
-![Image description]()
